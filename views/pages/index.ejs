@@ -6,19 +6,31 @@
     <%- include ('../partials/head') %>
   </head>
   <body>
-    <div style="height: 60px;">
+    <div class="div-height">
       <nav>
         <%- include ('../partials/nav') %>
       </nav>
     </div>
     <div class="layout">
-      <div>
-        <article class="content">
-          <%- include ('../partials/content') %>
-        </article>
-        <footer class="footer">
-          asdsadasdasd
-        </footer>
+      <div class="pages">
+        <div class="pages-inner">
+          <div class="body">
+            <% for (i = 0; i < title.length; i++) { %>
+            <div class="feed-item">
+              <h2 class="feed-item-title">
+                <a class="feed-item-title-link" href=".<%= slug[i] %>"><%= title[i] %></a>
+              </h2>
+              <div class="feed-item-meta">
+                <time class="feed-item-meta_time"><%= date[i] %></time>
+                <span class="feed-item-meta_divider"></span>
+                <span class="feed-item-meta_tag"><%= tag[i] %></span>
+              </div>
+              <p class="feed-item-description"><%= desc[i] %></p>
+              <a class="feed-item-readmore" href=".<%= slug[i] %>">Read</a>
+            </div>
+            <% } %>
+          </div>
+        </div>
       </div>
     </div>
   </body>

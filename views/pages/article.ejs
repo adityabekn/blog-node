@@ -1,0 +1,32 @@
+<!-- views/pages/article.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('../partials/head') %>
+  </head>
+  <body>
+    <div class="div-height">
+      <nav>
+        <%- include ('../partials/nav') %>
+      </nav>
+    </div>
+    <div class="layout">
+      <div>
+        <article class="article">
+          <h1 class="title"><%= title %></h1>
+          <h2 class="subtitle"><%= description %></h2>
+          <div class="date">
+            <p class="date-content">
+              <time><%= date %></time>
+            </p>
+          </div>
+          <div class="spacer"></div>
+          <div class="content-body">
+            <%- post %>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
