@@ -42,7 +42,6 @@ router.get("/:article", function (req, res) {
   res.render("pages/article", {
     post: result,
     title: file.data.title,
-    description: file.data.description,
     date: file.data.date,
   });
 });

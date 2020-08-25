@@ -1,0 +1,1 @@
+document.getElementsByTagName("img")[1].setAttribute("loading", "lazy"); 
